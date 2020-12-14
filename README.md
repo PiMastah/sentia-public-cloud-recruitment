@@ -15,4 +15,8 @@ My rationale for this decision is as follows:
 3. In a real-world scenario, Implementation should be an easier step, as earlier in the process, a number of decisions have already been made and most of the risks should be known and addressed in some way.
 4. By demonstrating the ability to design an adequate and coherent architecture and to define a road map for the identified milestones, a certain amount of experience with and understanding of IaC should hopefully be evident.
 
+## Where to start?
+
+Start by heading to the [wiki](https://github.com/PiMastah/sentia-public-cloud-recruitment/wiki) or take a look at the current [issues](https://github.com/PiMastah/sentia-public-cloud-recruitment/issues) or take a look at the [kanban board](https://github.com/PiMastah/sentia-public-cloud-recruitment/projects/1).
+
 Copyright © 2020 Jan Peters. All rights reserved. No duplication or use of any part allowed without prior written consent.
