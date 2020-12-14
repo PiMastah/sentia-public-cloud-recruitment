@@ -13,4 +13,3 @@ resource "aws_subnet" "env-subnet" {
 
     provider = aws.environment
 }
-

@@ -1,2 +1,2 @@
 env="PROD"
-cidr_block = "10.0.64.0/20"
+cidr_block = "10.0.32.0/20"
