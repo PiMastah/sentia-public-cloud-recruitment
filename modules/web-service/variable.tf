@@ -19,3 +19,13 @@ variable "availability_zones" {
   description = "Availability zones used"
   default = ["eu-central-1a", "eu-central-1b", "eu-central-1c"]
 }
+
+variable "max_capacity" {
+  description = "maximum service instances"
+  default = 4
+}
+
+variable "min_capacity" {
+  description = "minimum service instances"
+  default = 1
+}

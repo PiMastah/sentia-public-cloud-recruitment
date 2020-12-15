@@ -3,17 +3,15 @@ resource "aws_iam_role" "web_service_task_role" {
  
   assume_role_policy = <<EOF
 {
- "Version": "2012-10-17",
- "Statement": [
-   {
-     "Action": "sts:AssumeRole",
-     "Principal": {
-       "Service": "ecs-tasks.amazonaws.com"
-     },
-     "Effect": "Allow",
-     "Sid": ""
-   }
- ]
+  "Version": "2012-10-17",
+  "Statement": [{
+    "Action": "sts:AssumeRole",
+    "Principal": {
+      "Service": "ecs-tasks.amazonaws.com"
+    },
+    "Effect": "Allow",
+    "Sid": ""
+  }]
 }
 EOF
 }
@@ -24,14 +22,17 @@ resource "aws_iam_policy" "web_service" {
  
  policy = <<EOF
 {
-   "Version": "2012-10-17",
-   "Statement": [
-       {
-           "Effect": "Allow",
-           "Action": "*",
-           "Resource": "*"
-       }
-   ]
+  "Version": "2012-10-17",
+  "Statement": [{
+    "Effect": "Allow",
+    "Actions": [
+      "s3:ListAllMyBuckets",
+      "s3:GetBucketLocation"
+    ],
+    "Resources": [
+      "arn:aws:s3:::*"
+    ]
+  }]
 }
 EOF
 }
@@ -46,17 +47,15 @@ resource "aws_iam_role" "web_service_task_execution_role" {
  
   assume_role_policy = <<EOF
 {
- "Version": "2012-10-17",
- "Statement": [
-   {
-     "Action": "sts:AssumeRole",
-     "Principal": {
-       "Service": "ecs-tasks.amazonaws.com"
-     },
-     "Effect": "Allow",
-     "Sid": ""
-   }
- ]
+  "Version": "2012-10-17",
+  "Statement": [{
+    "Action": "sts:AssumeRole",
+    "Principal": {
+      "Service": "ecs-tasks.amazonaws.com"
+    },
+    "Effect": "Allow",
+    "Sid": ""
+  }]
 }
 EOF
 }
