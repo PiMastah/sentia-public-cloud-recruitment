@@ -23,16 +23,16 @@ resource "aws_iam_policy" "web_service" {
  policy = <<EOF
 {
   "Version": "2012-10-17",
-  "Statement": [{
-    "Effect": "Allow",
-    "Actions": [
-      "s3:ListAllMyBuckets",
-      "s3:GetBucketLocation"
-    ],
-    "Resources": [
-      "arn:aws:s3:::*"
-    ]
-  }]
+  "Statement": [
+    {
+        "Effect": "Allow",
+        "Action": [
+            "s3:ListAllMyBuckets",
+            "s3:GetBucketLocation"
+        ],
+        "Resource": "*"
+    }
+  ]
 }
 EOF
 }
