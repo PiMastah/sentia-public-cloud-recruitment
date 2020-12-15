@@ -1,2 +1,2 @@
 env="TEST"
-cidr_block = "10.0.48.0/20"
+cidr_block = "10.0.32.0/20"
